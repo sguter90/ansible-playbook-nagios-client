@@ -1,0 +1,1 @@
+# Example Playbook for Nagios Client Setup

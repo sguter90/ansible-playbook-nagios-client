@@ -1,0 +1,4 @@
+# install from ansible galaxy
+- src: https://github.com/sguter90/ansible-role-nagios-client.git
+  scm: git
+  version: master

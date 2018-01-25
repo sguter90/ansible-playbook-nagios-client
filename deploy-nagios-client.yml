@@ -1,0 +1,9 @@
+# deploy-nagios-client.yml
+- name: setup nagios client
+  hosts: servers
+  become: yes
+  vars_files:
+    - vars/nagios-client.yml
+
+  roles:
+    - { role: sguter90.ansible-role-nagios-client }

@@ -1,0 +1,15 @@
+nrpe_client_allowed_hosts:
+    - 127.0.0.1
+    - 10.0.0.12
+    - 10.0.0.13
+nrpe_client_debug: 0
+nrpe_client_dont_blame_nrpe: 1
+nrpe_client_plugin_path: /usr/lib64/nagios/plugins
+nrpe_client_command_timeout: 60
+nrpe_client_connection_timeout: 300
+nrpe_local_plugin_dir: "{{ playbook_dir }}/files/plugins"
+nrpe_local_nrped_dir: "{{ playbook_dir }}/files/nrpe.d"
+nrpe_local_etc_dir: "{{ playbook_dir }}/files/etc"
+nrpe_client_commands:
+  - name: check_uptime
+    command: 'check_uptime.pl -c $ARG1$'
